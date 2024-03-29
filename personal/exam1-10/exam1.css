@@ -1,0 +1,76 @@
+.box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ebebeb;
+  width: 50%;
+  margin: auto;
+  padding: 50px 0 80px 0;
+}
+
+
+.code{
+  background-color: #ebebeb;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 50%;
+
+}
+
+.codeIner{
+  width: 50%;
+}
+
+.code p{
+  font-size: 20px;
+}
+
+.codeView1{
+  background-color: #ebebeb;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+  /* text-align: center; */
+  width: 50%;
+  color: red;
+}
+
+.codeView p{
+  margin: 50px;
+}
+
+.boxFooter{
+  margin: 50px;
+  font-size: 10px;
+}
+
+.codeView2{
+  background-color: #ebebeb;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.codeView2 li{
+  /* width: 50%;
+  justify-content: center;
+  text-align:justify; */
+  margin: auto;
+}
+
+.codeView3 a:link{
+  /* width: 50%;
+  justify-content: center;
+  text-align:justify; */
+  margin: auto;
+  color: red;
+}
+
+.codeView3 a:visited{
+  /* width: 50%;
+  justify-content: center;
+  text-align:justify; */
+  margin: auto;
+  color: purple;
+}

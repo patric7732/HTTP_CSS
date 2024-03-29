@@ -48,14 +48,34 @@
   box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
-.postList h2{
+.postList{
+  margin: 50px;
+}
+
+
+.postList a{
   text-align: center;
-  margin-top: 30px;
 }
 
 .postList p{
-  width: 50%;
-  text-align: justify;
   margin-left: auto;
   margin-right: auto;
+  font-size: 18px;
+}
+
+.post1{
+  box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.1);
+  margin: 100px;
+}
+.post2{
+  box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.1);
+  margin: 100px;
+}
+.post3{
+  box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.1);
+  margin: 100px;
+}
+.post4{
+  box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.1);
+  margin: 100px;
 }
