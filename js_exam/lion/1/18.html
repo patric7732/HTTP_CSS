@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const food = {
+      foodName: "피자"
+    }
+
+    function getFoodName(food){
+      if(!food) return "아무거나";
+      return food.foodName;
+    }
+
+    console.log(getFoodName(food));
+
+    const food2 = null;
+    console.log(getFoodName(food2));
+
+    function getFoodName(food){
+      return food && food.foodName;
+    }
+
+    console.log(true && "hello");
+    console.log(false && "hello");
+    console.log(false || "hello");
+    console.log(null || "hello");
+    console.log("" || "hello");
+    console.log(undefined || "hello");
+    console.log("a" || "hello");
+    console.log(1 || "hello");
+
+    let a;
+    let b = null;
+    let c = undefined;
+    let d = 4;
+    let e = "test";
+
+    let f = a || b || c || d || e;
+
+    console.log(f);
+
+    const name = "patric";
+    const userName = name || "guest";
+
+    console.log(userName);
+    
+  </script>
+</body>
+</html>
