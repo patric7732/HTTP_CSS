@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+
+        <script>
+            // 함수 호이스팅
+            hello();
+
+            // 호이스팅 되지 않는다. 오류 발생 func1();
+
+            function hello() {
+                console.log("hello");
+            }
+
+            // 함수 중복 정의 가장 마지막 함수가 실행됨
+            function hello() {
+                console.log("hey, hey, hey");
+            }
+
+            // 상수 func1 에 함수가 정의. 함수가 일급객체이므로 가능
+            const func1 = function () {
+                console.log("func Hello");
+            };
+
+            func1();
+
+            // 화살표 함수
+            const func2 = () => console.log("func2 active");
+            func2();
+
+            function hi(a) {
+                console.log("hello " + a);
+            }
+
+            // 자바스크립트는 타입 오버로딩이 안됨, 타입이 없기때문
+            hi(10);
+            hi("aa")
+
+            const hi2 = a => console.log("hello " + a);
+            hi2("hi2")
+
+            function sum(a, b) {
+                return a + b;
+            }
+
+            const sum1 = function (a, b) {
+                return a + b;
+            }
+
+            const sum2 = (a, b) => a + b;
+
+            console.log(sum1(3, 4));
+            sum2(3, 4);
+
+
+            const plusTest = (a, b) => a + b;
+            const minusTest = (a, b) => a - b;
+            const test1 = (a, b) => a * b;
+            const test2 = (a, b) => a / b;
+
+            console.log(plusTest(3, 4));
+            console.log(minusTest(5, 4));
+            console.log(test1(3, 4));
+            console.log(test2(6, 2));
+        </script>
+
+    </body>
+</html>

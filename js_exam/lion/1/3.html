@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    function add(a) {
+      console.log("a + a");
+      return a + a;
+    }
+
+    function add(a, b) {
+      console.log("a + b");
+      return a + b;
+    }
+    
+    // 자바스크립트 메소드가 오버로딩 되지 않는다.
+    // add(a), add(a,b)가 구분되지 않는다.
+    // 나중에 선언된 add만 실행된다.
+    add(3);
+    add(3, 5);
+    add(3, 5);
+    add(3, 5);
+
+    function add(a,b,c){
+      console.log(arguments.length);
+      console.log("첫 번째 매개변수 값::: " + arguments[0]);
+    }
+
+    function hello(name) {
+      console.log('hello, ${name}!'); 
+    }
+
+    hello("준영");
+
+    function hello(name) {
+      console.log(`Hello, ${name}!`);
+      }
+      hello('carami');
+      
+// 화살표 함수는 객체를 사용할 때 못씀
+// 소속이 전체 global 이기 때문에 사용 못 함
+
+const getGrade = (score) => {
+  if (score >= 90) {
+    return 'A';
+  } else if (score >= 80) {
+    return 'B';
+  } else if (score >= 70) {
+    return 'C';
+  } else if (score >= 60) {
+    return 'D';
+  } else {
+    return 'F';
+  }
+}
+
+console.log(getGrade(90));
+
+  </script>
+  
+</body>
+</html>

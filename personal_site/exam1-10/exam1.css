@@ -1,13 +1,37 @@
+nav{
+  display: flex;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  width: 100%;
+  background-color: rgba(54, 54, 54, 0.233);
+}
+
+nav li{
+  display: inline;
+  padding: 0 20px;
+  
+}
+nav a{
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 350;
+  color: black;
+}
+
 .box{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  /* text-align: center; */
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
   border: 1px solid #ebebeb;
   width: 50%;
   margin: auto;
   padding: 50px 0 80px 0;
+}
+.box h1{
+  text-align: center;
 }
 
 
@@ -60,11 +84,11 @@
 }
 
 .codeView3 a:link{
-  /* width: 50%;
+  background-color: #ebebeb;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
   justify-content: center;
-  text-align:justify; */
-  margin: auto;
-  color: red;
+  align-items: center;
+  width: 50%;
 }
 
 .codeView3 a:visited{
@@ -73,4 +97,16 @@
   text-align:justify; */
   margin: auto;
   color: purple;
+}
+
+.codeView4{
+  background-color: #ebebeb;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.codeView4 li a{
+  text-decoration: none;
 }

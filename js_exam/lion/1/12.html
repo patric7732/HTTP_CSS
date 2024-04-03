@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    const todos = [
+                {
+                    id: 1,
+                    text: '자바스크립트 입문',
+                    done: true
+                }, {
+                    id: 2,
+                    text: '함수 배우기',
+                    done: true
+                }, {
+                    id: 3,
+                    text: '객체와 배열 배우기',
+                    done: true
+                }, {
+                    id: 4,
+                    text: '배열 내장함수 배우기',
+                    done: false
+                }
+            ];
+
+            const tasksNotDon = todos.filter(todo => todo.done ===false);
+            console.log(tasksNotDon);
+
+            const numbers = [10, 20, 30, 40, 50];
+
+            // const index = numbers.indexOf(3);
+            // numbers.splice(index, 1);
+            // console.log(numbers);
+
+            // numbers.splice(0, 1);
+
+            const sliced = numbers.slice(0, 2);
+
+            console.log(sliced);
+            console.log(numbers);
+
+            const value = numbers.shift();
+            console.log(value);
+            console.log(numbers);
+
+            const value1 = numbers.pop();
+            console.log(value1);
+
+            const arr1 = [1, 2, 3];
+            const arr2 = [4, 5, 6];
+
+            const concated = arr1.concat(arr2);
+            console.log(concated);
+
+            const joinTest = [1, 2, 3, 4, 5, 6];
+            console.log(joinTest.join());
+            console.log(joinTest.join(' '));
+            console.log(joinTest.join(', '));
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <script>
+            const numbers = [1, 2, 3, 4, 5];
+
+            let sum = 0;
+            numbers.forEach(n => {
+                sum += n;
+            })
+            console.log(sum);
+
+            const array = [1, 2, 3, 4, 5];
+
+            sum = array.reduce((accumulator, current) => accumulator + current, 0);
+            console.log(sum);
+
+
+            // 중간의 상황을 보고 싶으면 return을 중간에 추가해줘야함
+            sum = numbers.reduce((accumulator, current) => {
+                console.log({accumulator, current});
+                return accumulator + current;
+            }, 0);
+            console.log(sum);
+        </script>
+    </body>
+</html>
