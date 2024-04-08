@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <div>
+            <button>click</button>
+            <button>click</button>
+        </div>
+
+        <script>
+          function changeColor(event) {
+            // 랜덤 색상 생성
+            const randomColor = "#" + Math.floor(Math.random()*16777215).toString(16);
+            // 배경색 변경
+            document.body.style.backgroundColor = randomColor;
+
+            // 화살표 함수로 했으면 event.target...으로 해야함
+            // this.removeEventListener("click", changeColor);
+            event.target.removeEventListener("click",changeColor);
+          }
+
+    
+          // 모든 버튼을 선택하고 각 버튼에 이벤트 리스너 추가
+          const buttons = document.querySelectorAll("button");
+
+          buttons.forEach(button => {
+              button.addEventListener("click", changeColor);
+          });
+        </script>
+
+    </body>
+</html>

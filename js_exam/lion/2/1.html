@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To-Do List Application</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .todo-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        .todo-text {
+            flex-grow: 1;
+        }
+        .done {
+            text-decoration: line-through;
+        }
+        .delete-btn {
+            color: red;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        input[type="text"] {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>My To-Do List</h2>
+<input type="text" id="todoInput" placeholder="Add new to-do...">
+<button id="addBtn">Add</button>
+<ul id="todoList"></ul>
+
+<script>
+// Initial data
+let basicDatas = [
+    { id: 1, title: "Todo 1", done: false },
+    { id: 2, title: "Todo 2", done: true },
+];
+
+function generateTodoItem(todo) {
+    const li = document.createElement('li');
+    li.setAttribute('data-id', todo.id);
+    li.classList.add('todo-item');
+    li.innerHTML = `
+        <span class="todo-text ${todo.done ? 'done' : ''}" onclick="toggleDone(${todo.id})">${todo.title}</span>
+        <span class="delete-btn" onclick="deleteTodo(${todo.id})">X</span>
+    `;
+    return li;
+}
+
+function renderTodos() {
+    const todoList = document.getElementById('todoList');
+    todoList.innerHTML = ''; // Clear the list
+    basicDatas.forEach(todo => {
+        todoList.appendChild(generateTodoItem(todo));
+    });
+}
+
+function addTodo() {
+    const input = document.getElementById('todoInput');
+    const title = input.value.trim();
+    if (title) {
+        const newId = basicDatas.length > 0 ? Math.max(...basicDatas.map(t => t.id)) + 1 : 1;
+        const newTodo = { id: newId, title, done: false };
+        basicDatas.push(newTodo);
+        renderTodos();
+        input.value = ''; // Clear input
+    }
+}
+
+function toggleDone(id) {
+    const todo = basicDatas.find(t => t.id === id);
+    if (todo) {
+        todo.done = !todo.done;
+        renderTodos();
+    }
+}
+
+function deleteTodo(id) {
+    basicDatas = basicDatas.filter(t => t.id !== id);
+    renderTodos();
+}
+
+// Event listeners
+document.getElementById('addBtn').addEventListener('click', addTodo);
+document.getElementById('todoInput').addEventListener('keydown', function(event) {
+    if (event.key === "Enter" || event.keyCode === 13) {
+        addTodo();
+    }
+});
+
+// Initial render
+window.onload = renderTodos;
+</script>
+</body>
+</html>

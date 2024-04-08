@@ -1,0 +1,31 @@
+<!-- 이벤트 버블링  -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+      * {
+        border: 3px solid black;
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- html의 모든 태그들은 박스로 되어 있음. -->
+    <!-- 이벤트가 전파됨 -->
+    <!-- 두가지 방법이 있는데 한가지는 계속 전파전파전파 되는 것이 버블링 -->
+    <!-- 나머지는 가장 밑에서 부터 캡처링 -->
+    <!-- 기본적으로는 버블링이 기준임 -->
+    <!--  -->
+    <div onclick="alert('outer-div');">
+      <div onclick="alert('inner-div');">
+        <div onclick="alert('inner-inner_div');">
+          <h1 onclick="alert('h1');">
+            <p onclick="alert('p');">p태그</p>
+          </h1>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

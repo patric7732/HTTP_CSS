@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <ul>
+
+            <li>할일 1</li>
+            <li>할일 2</li>
+            <li>할일 3</li>
+            <li>할일 4</li>
+            <li>할일 5</li>
+        </ul>
+
+        <label for="todo">할일을 입력하세요</label>
+        <input type="text" id="todo-value"/>
+        <button id="todoBtn">할일 입력</button>
+
+        <script>
+            // const todoBtn = document.getElementById("todoBtn"); const ul =
+            // document.getElementById("ul"); const todoValue =
+            // document.getElementById("todo-value");
+
+            // todoBtn.addEventListener('click', () =>{   const li =
+            // document.createElement("li");   const text =
+            // document.createTextNode("todo-value");   li.appendChile(text);
+
+            const todoBtn = document.getElementById("todoBtn");
+            const todoValue = document.getElementById("todo-value");
+
+            todoBtn.addEventListener('click', () => {
+                const ul = document.querySelector("ul");
+                const li = document.createElement("li");
+                const text = document.createTextNode(todoValue.value);
+                li.appendChild(text);
+                ul.appendChild(li);
+                todo.value = "";
+
+                // li.addEventListener('click', () => {
+                //     alert(li.textContent);
+                // })
+                ul.addEventListener("click", (e) => {
+                const todo = e.target.innerText;
+                alert(todo);
+            });
+            });
+
+            // li를 클릭하면 각각 li에 들어있는 할일 텍스트를 alert에 출력);
+
+            // const listItems = document.querySelectorAll("ul li");
+            // listItems.forEach(item => {
+            //     item.addEventListener('click', () => {
+            //         alert(item.textContent);
+            //     });
+            // });
+            // 이벤트 추가
+
+           
+        </script>
+    </script>
+
+</body>
+</html>
